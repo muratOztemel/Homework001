@@ -42,8 +42,6 @@ const customerOrdersAndAge = customers.map((customer)=> {
 
 // Soru: Tüm müşterilerin siparişlerini en yüksekten en düşüğe sıralayıp tek bir dizi olarak döndür.
 
-const allOrdersDesc = customers.map((customer)=> {
-    return customer.orders.sort((a, b)=> b - a);
-});
+const allOrdersDesc = customers.flatMap((customer)=> customer.orders).sort((a, b)=> b - a);
 
 console.log(allOrdersDesc);
