@@ -10,7 +10,7 @@ const customers = [
 
 const findCustomers = customers.filter((customer) => customer.city === "İstanbul").map((customer)=> customer.name);
 
-//console.log(findCustomers);
+console.log(findCustomers);
 
 // Soru: Siparişleri toplamda 300 TL’den fazla olan ilk müşterinin adını döndür.
 
@@ -20,7 +20,7 @@ const ordersFirstCustomer = customers.find((customer)=> {
         return customer.name;
     }
 }).name;
-//console.log(ordersFirstCustomer);
+console.log(ordersFirstCustomer);
 
 // Soru: Şehir bazında toplam sipariş miktarlarını döndür.
 
@@ -29,7 +29,7 @@ acc[customer.city] = (acc[customer.city] || 0 ) + customer.orders.reduce((a,b)=>
 return acc;
 }, {});
 
-//console.log(cityTotalOrders);
+console.log(cityTotalOrders);
 
 //Soru: Her müşterinin toplam sipariş miktarını ve yaşını bir string olarak şu formatta döndür: Ahmet (32): 450 TL
 
@@ -38,7 +38,7 @@ const customerOrdersAndAge = customers.map((customer)=> {
     return `${customer.name} (${customer.age}): ${ordersTotal} TL`;
 });
 
-//console.log(customerOrdersAndAge);
+console.log(customerOrdersAndAge);
 
 // Soru: Tüm müşterilerin siparişlerini en yüksekten en düşüğe sıralayıp tek bir dizi olarak döndür.
 
